@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: keffjeffpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keffjeffpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: keffjeffpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: keffjeffpipelinesjavascriptdocker 
+          image: jtacr.azurecr.io/keffjeffpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
